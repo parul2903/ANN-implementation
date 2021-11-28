@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type = "text/markdown",
     url = "https://github.com/parul2903/ANN-implementation",
     packages = ["src"],
-    python_requires = ">=3.9",
+    python_requires = ">=3.8",
     install_requires = [
         "tensorflow",
         "matplotlib",
