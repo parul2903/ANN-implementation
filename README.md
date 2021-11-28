@@ -12,3 +12,6 @@ conda create --prefix ./envs python=3.9 -y
 ```bash
 conda activate ./envs
 ```
+### Reference
+
+[Conda env commands](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
