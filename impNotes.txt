@@ -1,0 +1,78 @@
+## YAML
+
+YAML acronym for Ain’t Markup Language or Yet Another Markup Language.
+YAML is a human-friendly data serialization standard for all programming languages. 
+It is widely used to store data in a serialized format.
+
+It is in simple human-readable format makes which makes it suitable for the 
+Configuration files.
+
+The YAML data format is a superset of one more widely used Markup language called 
+JSON (JavaScript Object Notation).
+
+######
+"""
+open():
+In Python you need to give access to a file by opening it. You can do it by 
+using the open() function. Open returns a file object, which has methods and 
+attributes for getting information about and manipulating the opened file.
+
+with:
+With the “With” statement, you get better syntax and exceptions handling.
+In addition, it will automatically close the file.
+
+yaml.safe_load():
+to read a YAML file (impNotes.txt)
+"""
+
+## PyYAML Module
+
+PyYAML is a YAML parser and emitter for Python. Using the PyYAML module, 
+we can perform various actions such as reading and writing complex configuration 
+YAML files, serializing and persisting YMAL data.
+
+Use it to convert the YAML file into a Python dictionary. Using the PyYAML module, 
+we can quickly load the YAML file and read its content.
+
+## yaml.load() function
+We can read the YAML file using the PyYAML module’s yaml.load() function. 
+This function parse and converts a YAML object to a Python dictionary (dict object). 
+This process is known as Deserializing YAML into a Python.
+
+## yaml.safe_load() function
+Due to the risk involved in loading a document from untrusted input, 
+it is advised to use the safe_load() .This is equivalent to using the load() 
+function with the loader as SafeLoader.
+
+## PARSING
+So “parsing” or “parsed” means to make something understandable.
+For programming this is converting information into a format that’s easier 
+to work with.
+
+## argparse Module
+The argparse module in Python helps create a program in a command-line-environment
+in a way that appears not only easy to code but also improves interaction. 
+The argparse module also automatically generates help and usage messages and 
+issues errors when users give the program invalid arguments.
+
+-> argparse.ArgumentParser():
+    argparse.ArgumentParser() initializes the parser so that you can start to 
+    add custom arguments.
+    it creates a parser object
+
+-> add_argument():
+    to add the arguements to the parser
+
+    Some important parameters to note for this method are name, type, help and 
+    required:
+    
+    * The name is exactly what it sounds like — the name of the command line field. 
+    * The type is the variable type that is expected as an input.
+    * The required parameter is a boolean for whether or not this command line 
+    field is mandatory or not.
+    * The help parameter provides help for the arguement.
+
+-> parse_args():
+ArgumentParser parses arguments through the parse_args() method. 
+This will inspect the command line, convert each argument to the appropriate 
+type and then invoke the appropriate action. I
