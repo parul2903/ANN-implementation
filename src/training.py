@@ -1,6 +1,7 @@
 from src.utils.common_utils import read_config
 from src.utils.data_management import get_data
 from src.utils.model import create_model, save_model, save_plot
+from src.utils.callbacks import get_callbacks
 import argparse
 import os
 import pandas as pd
@@ -21,7 +22,9 @@ def training(config_path):
     EPOCHS = config['params']['epochs']
     VALIDATION = (x_valid, y_valid)
 
-    model_fit = model.fit(x_train, y_train, epochs=EPOCHS, validation_data=VALIDATION)
+    CALLBACK_LIST = get_callbacks(config, x_train)
+
+    model_fit = model.fit(x_train, y_train, epochs=EPOCHS, validation_data=VALIDATION, callbacks = CALLBACK_LIST)
 
     artifacts_dir = config['artifacts']['artifacts_dir']
     model_name = config['artifacts']['model_name']
@@ -48,4 +51,4 @@ if __name__ == '__main__':
 
     parsed_args = parser.parse_args()
 
-    training(config_path=parsed_args.config)
+    training(config_path = parsed_args.config)
