@@ -29,7 +29,7 @@ to read a YAML file (impNotes.txt)
 
 PyYAML is a YAML parser and emitter for Python. Using the PyYAML module, 
 we can perform various actions such as reading and writing complex configuration 
-YAML files, serializing and persisting YMAL data.
+YAML files, serializing and persisting YAML data.
 
 Use it to convert the YAML file into a Python dictionary. Using the PyYAML module, 
 we can quickly load the YAML file and read its content.
@@ -46,7 +46,7 @@ function with the loader as SafeLoader.
 
 ## PARSING
 So “parsing” or “parsed” means to make something understandable.
-For programming this is converting information into a format that’s easier 
+For programming, this is converting information into a format that’s easier 
 to work with.
 
 ## argparse Module
@@ -71,6 +71,15 @@ issues errors when users give the program invalid arguments.
     * The required parameter is a boolean for whether or not this command line 
     field is mandatory or not.
     * The help parameter provides help for the arguement.
+
+Code:
+parser.add_argument("--config", "-c", default="config.yaml")
+parser.add_argument("--secret", "-c", default="secret.yaml")
+
+This function is important because if we have more than 1 config file so instead of changing
+this code, we can simply change the file name in the run time.
+Example: we have config.yaml and config2.yaml but we want to use config2.yaml
+python src/training.py --c = config2.yaml
 
 -> parse_args():
 ArgumentParser parses arguments through the parse_args() method. 
